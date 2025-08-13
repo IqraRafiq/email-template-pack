@@ -1,6 +1,6 @@
 # Email Template Pack
 
-This pack provides production-ready, responsive HTML email templates in multiple ESP formats.
+Production‑ready, responsive HTML email templates in three formats (raw HTML, Mailchimp, Klaviyo). Built for high compatibility across Gmail, Outlook, iOS/Android.
 
 ## Folders
 - `welcome_email/html/` – ESP-agnostic HTML (copy/paste into any provider)
@@ -14,7 +14,7 @@ This pack provides production-ready, responsive HTML email templates in multiple
 - `feedback_email/html/`, `feedback_email/mailchimp/`, `feedback_email/klaviyo/`
 
 ## Usage
-- HTML: Import as raw HTML in your ESP. Replace links and addresses.
+- HTML: Import as raw HTML in your ESP. Replace links, addresses, and brand name.
 - Mailchimp: Import as a template. Edit regions via the editor. Merge tags used:
   - `*|MC_PREVIEW_TEXT|*`, `*|CURRENT_YEAR|*`, `*|LIST:ADDRESS|*`, `*|UNSUB|*`
   - For password reset: `*|RESET_LINK|*` (create a campaign/template variable for the button URL)
@@ -30,22 +30,46 @@ This pack provides production-ready, responsive HTML email templates in multiple
 
 ## Responsive/Dark Mode
 - Mobile responsive with fluid tables and inline styles
-- Transparent confetti images adapt in dark mode
-- Outlook (desktop) background images supported via VML fallbacks
-- CTA buttons include bulletproof VML fallback for rounded corners in Outlook
+- Transparent PNG confetti assets (`confetti_header.png`, `confetti_bottom.png`) work in light/dark themes
+- Outlook desktop background images supported via VML fallbacks
+- CTA buttons use bulletproof VML for rounded corners in Outlook
 
 ## Adding New Templates
 1. Start from `welcome_email/html/welcome_email.html` as a base.
 2. Duplicate into `mailchimp/` and add mc:edit + Mailchimp merge tags.
 3. Duplicate into `klaviyo/` and convert merge tags to Klaviyo variables.
-4. Keep images at 600px width canvases for backgrounds; use PNG with transparency.
-5. Test in Gmail, Outlook, iOS/Android, and (optionally) Litmus/Email on Acid.
+4. Keep background images at 600px wide canvases; use transparent PNGs.
+5. Test in Gmail (web/mobile), Outlook desktop (Windows, Mac), Apple Mail, iOS/Android. Optional: Litmus/Email on Acid.
 
 ## Customization Checklist (per template)
-- Replace brand name and `logo.png` with your assets
-- Update CTA links (`*|RESET_LINK|*` for Mailchimp, `{{ reset_link }}` for Klaviyo)
-- Swap social URLs and footer address
-- Optionally host images on your CDN (update `assets/images/*` URLs)
+- Replace brand name and `assets/images/logo.png`
+- Update CTA links and variables (see per‑ESP merge vars above)
+- Replace social URLs and footer address/company info
+- Swap illustration sizes if desired (common sizes: 140–380px, exported @2x)
+- Host images on your CDN for production and update URLs
+
+## Assets and Sizes
+- Header/Bottom confetti: `confetti_header.png`, `confetti_bottom.png` (canvas 600px wide)
+- Illustrations: 140–380px display width, export @2x (e.g., 280–760px)
+- Emojis: 64px (`happy_emoticon.png`, `neutral_emoticon.png`, `sad_emoticon.png`)
+
+## Compatibility
+- Tested with table‑based layout; no web fonts; inline CSS
+- Works in: Gmail, Apple Mail, Outlook (with VML), iOS Mail, Android Gmail
+- Uses standard ALT text; decorative elements use background images where appropriate
+
+## Packaging for Envato
+1. Include the following in your ZIP:
+   - `welcome_email/`, `password_reset/`, `email_activation/`, `support_request/`, `payment_confirmation/`, `feature_announcement/`, `feedback_email/`
+   - `assets/images/` (PNG assets referenced by templates)
+   - `README.md` (this file)
+2. Provide screenshots previews for each template (optional but recommended).
+3. Version your release (e.g., `v1.0.0`) and include a short changelog if you update files later.
+
+## License/Notes for Buyers
+- Replace all placeholder links, addresses, and brand assets with your own.
+- Ensure unsubscribe and address blocks comply with your ESP and local laws.
+- Images provided for demo; host on your own CDN for production deliverability.
 
 ## Notes
 - Keep all CSS inline. Avoid web fonts and complex CSS.
