@@ -10,6 +10,8 @@ This pack provides production-ready, responsive HTML email templates in multiple
 - `email_activation/html/`, `email_activation/mailchimp/`, `email_activation/klaviyo/`
 - `support_request/html/`, `support_request/mailchimp/`, `support_request/klaviyo/`
 - `payment_confirmation/html/`, `payment_confirmation/mailchimp/`, `payment_confirmation/klaviyo/`
+- `feature_announcement/html/`, `feature_announcement/mailchimp/`, `feature_announcement/klaviyo/`
+- `feedback_email/html/`, `feedback_email/mailchimp/`, `feedback_email/klaviyo/`
 
 ## Usage
 - HTML: Import as raw HTML in your ESP. Replace links and addresses.
