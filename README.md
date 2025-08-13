@@ -8,6 +8,8 @@ This pack provides production-ready, responsive HTML email templates in multiple
 - `welcome_email/klaviyo/` – Klaviyo build with Liquid tags and unsubscribe macro
 - `password_reset/html/`, `password_reset/mailchimp/`, `password_reset/klaviyo/`
 - `email_activation/html/`, `email_activation/mailchimp/`, `email_activation/klaviyo/`
+- `support_request/html/`, `support_request/mailchimp/`, `support_request/klaviyo/`
+- `payment_confirmation/html/`, `payment_confirmation/mailchimp/`, `payment_confirmation/klaviyo/`
 
 ## Usage
 - HTML: Import as raw HTML in your ESP. Replace links and addresses.
@@ -15,10 +17,14 @@ This pack provides production-ready, responsive HTML email templates in multiple
   - `*|MC_PREVIEW_TEXT|*`, `*|CURRENT_YEAR|*`, `*|LIST:ADDRESS|*`, `*|UNSUB|*`
   - For password reset: `*|RESET_LINK|*` (create a campaign/template variable for the button URL)
   - For account activation: `*|ACTIVATION_LINK|*` (create a campaign/template variable for the button URL)
+  - For support request: `*|TICKET_ID|*`, `*|SUBMIT_DATE|*`, `*|RESPONSE_TIME|*`, `*|TICKET_URL|*`
+  - For payment confirmation: `*|TRANSACTION_ID|*`, `*|PAYMENT_METHOD|*`, `*|DATE|*`, `*|BILLING_URL|*`
 - Klaviyo: Import as HTML template. Merge tags used:
   - `{{ now | date: "%Y" }}`, `{{ organization.full_address }}`, `{% unsubscribe %}`
   - For password reset: `{{ reset_link }}` (set as a variable/flow property for the button URL)
   - For account activation: `{{ activation_link }}` (set as a variable/flow property for the button URL)
+  - For support request: `{{ ticket_id }}`, `{{ submitted_on }}`, `{{ response_time }}`, `{{ ticket_url }}`
+  - For payment confirmation: `{{ plan_name }}`, `{{ amount_paid }}`, `{{ transaction_id }}`, `{{ payment_method }}`, `{{ date }}`, `{{ billing_url }}`
 
 ## Responsive/Dark Mode
 - Mobile responsive with fluid tables and inline styles
