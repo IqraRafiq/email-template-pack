@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:mc="http://www.w3.org/1999/xhtml">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
@@ -7,11 +7,11 @@
   <meta name="format-detection" content="date=no">
   <meta name="format-detection" content="address=no">
   <meta name="format-detection" content="email=no">
-  <title>Welcome to YourBrand</title>
+  <title>Activate your account</title>
 </head>
 <body style="margin:0; padding:0; background:#f7f7fa; font-family:Arial, sans-serif; color:#000; -webkit-text-size-adjust:100%; -ms-text-size-adjust:100%;">
-  <!-- Optional preheader text -->
-  <div style="display:none; font-size:1px; color:#ffffff; line-height:1px; max-height:0; max-width:0; opacity:0; overflow:hidden; mso-hide:all;">Welcome to YourBrand</div>
+  <!-- Preheader (Mailchimp preview text) -->
+  <div style="display:none; font-size:1px; color:#ffffff; line-height:1px; max-height:0; max-width:0; opacity:0; overflow:hidden; mso-hide:all;" mc:edit="preheader">*|MC_PREVIEW_TEXT|*</div>
   <center>
     <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="background:#f7f7fa; min-width:100%;">
       <tr>
@@ -33,9 +33,9 @@
                 <div>
                   <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
                     <tr>
-                      <td align="center" style="padding:110px 20px 20px 20px;">
+                      <td align="center" style="padding:110px 20px 20px 20px;" mc:edit="brand_block">
                         <img src="https://raw.githubusercontent.com/IqraRafiq/email-template-pack/main/assets/images/logo.png" alt="YourBrand logo icon" width="64" style="vertical-align:middle; display:inline-block; max-width:100%; height:auto; width:64px;">
-                        <span style="font-size:32px; font-weight:700; color:#053968; font-family:Arial, sans-serif; letter-spacing:-1px; display:inline-block; vertical-align:middle;">YourBrand</span>
+                        <span style="font-size:32px; font-weight:700; color:#053968; font-family:Arial, sans-serif; letter-spacing:-1px; display:inline-block; vertical-align:middle;" mc:edit="brand_name">YourBrand</span>
                       </td>
                     </tr>
                   </table>
@@ -46,28 +46,35 @@
                 <![endif]-->
               </td>
             </tr>
-            <!-- Welcome Title -->
+            <!-- Title -->
             <tr>
-              <td align="center" style="padding:20px;">
-                <h1 style="font-size:28px; font-weight:700; color:#000; margin:0 0 16px 0; font-family:Arial, sans-serif; line-height:1.2;">Welcome to YourBrand</h1>
+              <td align="center" style="padding:20px;" mc:edit="title_block">
+                <h1 style="font-size:28px; font-weight:700; color:#000; margin:0 0 16px 0; font-family:Arial, sans-serif; line-height:1.2;" mc:edit="title">You're Almost There!</h1>
               </td>
             </tr>
             <!-- Body Text -->
             <tr>
-              <td align="center" style="padding:0 20px;">
-                <p style="font-size:18px; color:#000; margin:0 0 32px 0; line-height:1.4; font-family:Arial, sans-serif;">Thank you for signing up. We're excited to have you on board!</p>
+              <td align="center" style="padding:0 20px;" mc:edit="body_block">
+                <p style="font-size:18px; color:#000; margin:0 0 16px 0; line-height:1.5; font-family:Arial, sans-serif;" mc:edit="line1">Thanks for joining YourBrand — we're thrilled to have you on board!</p>
+                <p style="font-size:18px; color:#000; margin:0 0 32px 0; line-height:1.5; font-family:Arial, sans-serif;" mc:edit="line2">Your account has been successfully created and is currently pending activation.</p>
+              </td>
+            </tr>
+            <!-- Illustration -->
+            <tr>
+              <td align="center" style="padding:0 20px 24px 20px;" mc:edit="illustration_block">
+                <img src="https://raw.githubusercontent.com/IqraRafiq/email-template-pack/main/assets/images/email_activation.png" alt="Account activation illustration" width="350" style="display:block; margin:0 auto; max-width:100%; height:auto;">
               </td>
             </tr>
             <!-- CTA Button -->
             <tr>
-              <td align="center" style="padding:0 20px 40px 20px;">
+              <td align="center" style="padding:0 20px 40px 20px;" mc:edit="cta_block">
                 <!--[if mso]>
-                <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" href="#" style="height:56px;v-text-anchor:middle;width:240px;" arcsize="20%" fillcolor="#65b2b4" stroke="f">
-                  <center style="color:#ffffff;font-family:Arial, sans-serif;font-size:20px;font-weight:700;">Get Started</center>
+                <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" href="*|ACTIVATION_LINK|*" style="height:56px;v-text-anchor:middle;width:300px;" arcsize="20%" fillcolor="#65b2b4" stroke="f">
+                  <center style="color:#ffffff;font-family:Arial, sans-serif;font-size:20px;font-weight:700;">Activate My Account</center>
                 </v:roundrect>
                 <![endif]-->
                 <!--[if !mso]><!-- -->
-                <a href="#" style="display:inline-block; padding:16px 40px; background-color:#65b2b4; color:#fff; font-weight:700; text-decoration:none; border-radius:12px; font-size:20px; box-shadow:0 4px 16px rgba(101,178,180,0.18); font-family:Arial, sans-serif; min-width:120px; text-align:center; max-width:100%;">Get Started</a>
+                <a href="*|ACTIVATION_LINK|*" style="display:inline-block; padding:16px 40px; background-color:#65b2b4; color:#fff; font-weight:700; text-decoration:none; border-radius:12px; font-size:20px; box-shadow:0 4px 16px rgba(101,178,180,0.18); font-family:Arial, sans-serif; min-width:160px; text-align:center; max-width:100%;" mc:edit="cta_button">Activate My Account</a>
                 <!--<![endif]-->
               </td>
             </tr>
@@ -82,8 +89,8 @@
                 <div>
                   <table width="100%" cellpadding="0" cellspacing="0" border="0" role="presentation">
                     <tr>
-                      <td align="center" style="padding:0 20px 100px 20px;">
-                        <p style="font-size:18px; color:#000; margin:0; line-height:1.5; font-family:Arial, sans-serif;">If you have any questions or need assistance, feel free to reach out. Enjoy exploring our product and its features!</p>
+                      <td align="center" style="padding:0 20px 100px 20px;" mc:edit="note_block">
+                        <p style="font-size:18px; color:#000; margin:0; line-height:1.5; font-family:Arial, sans-serif;" mc:edit="note_copy">Need help? Visit Support</p>
                       </td>
                     </tr>
                   </table>
@@ -96,17 +103,17 @@
             </tr>
             <!-- Footer -->
             <tr>
-              <td align="center" style="background-color:#f0f2f5; padding:20px;">
+              <td align="center" style="background-color:#f0f2f5; padding:20px;" mc:edit="footer_block">
                 <img src="https://raw.githubusercontent.com/IqraRafiq/email-template-pack/main/assets/images/logo.png" alt="YourBrand logo small" width="40" style="margin-bottom:20px; max-width:100%; height:auto; width:40px;">
-                <div style="margin-bottom:20px;">
+                <div style="margin-bottom:20px;" mc:edit="footer_social">
                   <a href="#" style="margin:0 8px;"><img src="https://raw.githubusercontent.com/IqraRafiq/email-template-pack/main/assets/images/facebook.png" alt="Facebook icon" width="28" style="vertical-align:middle; max-width:100%; height:auto; width:28px;"></a>
                   <a href="#" style="margin:0 8px;"><img src="https://raw.githubusercontent.com/IqraRafiq/email-template-pack/main/assets/images/twitter.png" alt="Twitter icon" width="28" style="vertical-align:middle; max-width:100%; height:auto; width:28px;"></a>
                   <a href="#" style="margin:0 8px;"><img src="https://raw.githubusercontent.com/IqraRafiq/email-template-pack/main/assets/images/linkedin.png" alt="LinkedIn icon" width="28" style="vertical-align:middle; max-width:100%; height:auto; width:28px;"></a>
                 </div>
-                <p style="font-size:14px; color:#000; margin:0 0 8px 0; font-family:Arial, sans-serif;">© 2025 YourBrand<br>1234 Elm Street, Suite 567, City, • 12345</p>
-                <p style="margin:12px 0 0 0; font-size:14px; font-family:Arial, sans-serif; color:#000;">
+                <p style="font-size:14px; color:#000; margin:0 0 8px 0; font-family:Arial, sans-serif;" mc:edit="footer_address">© *|CURRENT_YEAR|* YourBrand<br>*|LIST:ADDRESS|*</p>
+                <p style="margin:12px 0 0 0; font-size:14px; font-family:Arial, sans-serif; color:#000;" mc:edit="footer_links">
                   <a href="#" style="text-decoration:none;">Support</a> |
-                  <a href="#" style="text-decoration:none;">Unsubscribe</a>
+                  <a href="*|UNSUB|*" style="text-decoration:none;">Unsubscribe</a>
                 </p>
               </td>
             </tr>
@@ -122,3 +129,5 @@
   </center>
 </body>
 </html>
+
+
